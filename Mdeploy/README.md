@@ -66,7 +66,7 @@ For insight into how we can create and implement these files, checkout [MDE labs
 
 ### Ecore metamodels
 
-A **metamodel** (`.ecore`)is an abstract representation that defines the structure, semantics, and constraints of models within a specific domain. It serves as the "model of models," establishing the rules and elements that models in your project must adhere to.
+A **metamodel** (`.ecore`) is an abstract representation that defines the structure, semantics, and constraints of models within a specific domain. It serves as the "model of models," establishing the rules and elements that models in your project must adhere to.
 
 <p align="center">
     <img width="60%" src="assets/initConfig_metamodel.PNG" />

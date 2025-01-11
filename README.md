@@ -15,12 +15,12 @@ To test the forms, you can get inspired by test input data in .json files inside
 - [Metamodels](#metamodels)
   - [Initial project configuration metamodel](#initial-project-configuration-metamodel)
   - [Gitlab metamodel](#gitlab-metamodel)
-- [T2M transformation](#t2m-transformation)
-- [M2M transformation](#m2m-transformation)
-- [M2T transformation](#m2t-transformation)
-- [T2M transformation: Converting JSON data into terraform model](#m2t-transformation-converting-json-data-into-terraform-model)
+- [Transformations](#transformations)
+    - [T2M transformation](#t2m-transformation)
+    - [M2M transformation](#m2m-transformation)
+    - [M2T transformation](#m2t-transformation)
 - [Web API](#web-api)
-  - [Project structure](#project-structure)
+  - [Architecture](#architecture)
   - [Use case diagram](#use-case-diagram)
 - [Validating generated files](#validating-generated-files)
   - [gitlab-ci.yml](#gitlab-ciyml)
@@ -53,19 +53,25 @@ To test the forms, you can get inspired by test input data in .json files inside
     <img width="80%" src="assets/gitlab_metamodel.PNG" />
 </p>
 
-## T2M transformation
+## Transformations
+
+<p align="center">
+    <img width="100%" src="assets/diag_activity_transformations.png" />
+</p>
+
+### T2M transformation
 
 - T2M (Text-to-Model) transformation allows generating a structured model from unstructured or semi-structured textual data. It is often used in scenarios where textual specifications or configurations need to be translated into formal models for further processing.
 - The script `JsontToModel.java` parses JSON data and converts it to an initConfig model of XMI format.
 - We used 2 java scripts to read from input JSON files which would be sent from the client (frontend), one for parsing initConfig-related data, and the other for Terraform.
 
-## M2M transformation
+### M2M transformation
 
 - M2M (Model-to-Model) transformation refers to the process of converting one model into another.
 - Eclipse Epsilon ETL Transformation rules to transform from initial configuration to gitlab model, by mapping some of their associated attributes and classes.
 - In our project, we implemented an M2M transformation from InitConfig to Gitlab.
 
-## M2T transformation
+### M2T transformation
 
 - On the other hand, M2T transformation allpows generating textual artifacts from models. This is often used to produce source code, documentation, or configuration files from structured models.
 - In our case, to generate the Gitlab YAML and Terraform `.tf` files.
@@ -73,25 +79,13 @@ To test the forms, you can get inspired by test input data in .json files inside
 ## Web API
 
 To automate these different transformations, we can integrate our MDE files with a Spring RESTful API. 
-By importing the necesseray EMF library into the SpringBoot project, we can exploit models. 
+By importing the necesseray EMF library into the SpringBoot project, we can exploit models. For more detail, check out [backend/README](backend/README.md).
 
-### Project structure
-```
-src/main/java/com/example/mde
-├── controller
-│   └── ProjectController.java
-│   └── TerraformController.java
-├── model
-│   └── initConfig
-│   └── gitlab
-│   └── terraform
-├── service
-│   └── ProjectService.java
-│   └── TerraformService.java
-└── util
-    └── JsonToModel.java
-    └── ...
-```
+### Architecture
+
+<p align="center">
+    <img width="70%" src="assets/web_api_architecture.PNG" />
+</p>
 
 ### Use case diagram
 
