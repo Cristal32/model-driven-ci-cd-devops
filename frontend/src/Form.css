@@ -45,12 +45,16 @@
   }
   
   /* Config Items */
-  .config-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
+  /* Config Items */
+.config-item {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap if they don't fit in a single row */
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Centers items vertically */
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
   
   .config-input {
     flex: 1;
@@ -72,20 +76,68 @@
     background-color: #ff0000;
   }
   
-  /* Add and Submit Buttons */
-  .add-btn,
-  .submit-btn {
+  .add-btn {
     background-color: #4caf50;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 5px 10px; /* Smaller padding */
+    font-size: 14px; /* Optional: Reduce font size */
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+    width: auto; /* Ensure it doesn't stretch unnecessarily */
   }
   
-  .add-btn:hover,
-  .submit-btn:hover {
+  .add-btn:hover {
     background-color: #45a049;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adds space between buttons */
+  }
+  
+  .add-btn,
+  .submit-btn {
+    width: 100%; /* Optional: Make buttons take full width */
+  }
+
+  button {
+    padding: 10px;
+    background-color: #09369f;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  .nav-btn {
+    color: white;
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .nav-btn.active {
+    background-color: #555;
+    border-radius: 5px;
+  }
+  
+  .nav-btn:hover {
+    background-color: #444;
   }
   
