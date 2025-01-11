@@ -12,7 +12,6 @@ To test the forms, you can get inspired by test input data in .json files inside
 ## Table of content
 
 - [Requirements](#requirements)
-  - [Dependencies (JAR libraries)](#dependencies-jar-libraries)
 - [Metamodels](#metamodels)
   - [Initial project configuration metamodel](#initial-project-configuration-metamodel)
   - [Gitlab metamodel](#gitlab-metamodel)
@@ -32,22 +31,7 @@ To test the forms, you can get inspired by test input data in .json files inside
 
 - Eclipse Modeling Tools 2022 [Download here](https://www.eclipse.org/downloads/packages/release/2021-03/r/eclipse-modeling-tools)
 - Eclipse Epsilon plugin [Update Sites](http://download.eclipse.org/epsilon/updates/2.6/)
-
-### Dependencies (JAR libraries)
-
-The following JAR libraries are included in the project classpath:
-
-In the `Mdeploy` project:
-- Jackson Annotations (v2.18.2) [Maven](https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations/2.18.2)
-- Jackson Core (v2.18.2) [Maven](https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core/2.18.2)
-- Jackson Databind (v2.18.2) [Maven](https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind/2.18.2)
-- EMF XML/XMI Persistence (v2.38) [Maven](https://mvnrepository.com/artifact/org.eclipse.emf/org.eclipse.emf.ecore.xmi/2.38.0) 
-- SnakeYAML (v2.3) [Maven](https://mvnrepository.com/artifact/org.yaml/snakeyaml/2.3)
-
-In the `backend` project:
-- EMF Ecore (v2.38) [Maven](https://mvnrepository.com/artifact/org.eclipse.emf/org.eclipse.emf.ecore/2.38.0)
-- EMF Common (v2.4) [Maven](https://mvnrepository.com/artifact/org.eclipse.emf/org.eclipse.emf.common/2.40.0)
-- EMF XML/XMI Persistence (v2.38)
+- External JAR libraries, stated in [Mdeploy/README.md](Mdeploy/README.md) and [backend/README.md](backend/README.md)
 
 ## Metamodels
 
