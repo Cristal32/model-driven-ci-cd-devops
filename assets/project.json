@@ -1,0 +1,33 @@
+{
+    "name": "My Project",
+    "url": "https://example.com",
+    "branch": "main",
+    "build": [
+      {
+        "name": "Maven",
+        "cmd": "mvn clean install",
+        "params": "-DskipTests"
+      }
+    ],
+    "tests": [
+      {
+        "name": "Unit Test",
+        "type": "JUnit",
+        "cmd": "mvn test",
+        "status": 1
+      },
+      {
+        "name": "Integration Test",
+        "type": "JUnit",
+        "cmd": "mvn verify",
+        "status": 2
+      }
+    ],
+    "deploy": [
+      {
+        "name": "Deploy",
+        "cmd": "docker-compose up"
+      }
+    ]
+  }
+  

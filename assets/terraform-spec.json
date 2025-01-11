@@ -1,0 +1,28 @@
+{
+    "providers": [
+      {
+        "name": "aws",
+        "version": "3.0",
+        "attributes": [
+          { "key": "region", "value": "us-east-1" }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "name": "my_instance",
+        "type": "aws_instance",
+        "attributes": [
+          { "key": "ami", "value": "ami-123456" },
+          { "key": "instance_type", "value": "t2.micro" }
+        ]
+      }
+    ],
+    "variables": [
+      { "name": "instance_count", "type": "number" }
+    ],
+    "outputs": [
+      { "name": "instance_ip", "value": "aws_instance.my_instance.public_ip" }
+    ]
+  }
+  

@@ -3,8 +3,11 @@
 ## Overview
 
 <p align="center">
-    <img width="80%" src="assets/overview.PNG" />
+    <img width="45%" src="assets/overview_initConfig.PNG" />
+    <img width="45%" src="assets/overview_terraform.PNG" />
 </p>
+
+To test the forms, you can get inspired by test input data in .json files inside the `assets/` folder. (`project.json` and `terraform-spec.json`)
 
 ## Table of content
 
