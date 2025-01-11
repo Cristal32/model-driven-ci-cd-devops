@@ -88,7 +88,7 @@ src/main/java/com/example/mde
 ├── service
 │   └── ProjectService.java
 │   └── TerraformService.java
-├── util
+└── util
     └── JsonToModel.java
     └── ...
 ```
